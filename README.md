@@ -15,8 +15,7 @@ site/
 ├── home-hero.jpg   Home band (from Class.HEIC, pre-blurred Gaussian r=10)
 ├── China.png       Research band, shown whole
 ├── Ivey.png        PhD at Ivey band
-├── teaching-hero.jpg / teaching-exam.jpg   Teaching bands
-└── Alexis_CV_Academic_2026Summer.pdf
+└── teaching-hero.jpg / teaching-exam.jpg   Teaching bands
 ```
 
 ## Design tokens (`style.css`, `:root`)
@@ -56,10 +55,13 @@ site/
 - **Paper drafts** — each working paper title and its DRAFT link point at a Google Drive file
   in `research.html`. Swap the URLs there when a draft moves.
 - **Contact rule** — the email address is shown as plain text everywhere, never as a mailto
-  link; LinkedIn is always the live link. The CV is linked exactly once, from the Home hero.
+  link; LinkedIn is always the live link.
 - **Accent** — one variable, `--accent`. A warm alternative that suits the paper ground
   is `#8A4B2F` (clay); a cooler one is `#28415C` (ink blue).
-- **CV** — replace the PDF and update the `href="Alexis_CV_..."` links.
+- **CV** — deliberately NOT published. The academic CV carries a personal phone number, so it
+  is kept outside this folder (`../Alexis_CV_Academic_2026Summer.pdf`) and nothing links to it.
+  To publish one later, make a copy with the phone number removed, drop it in here, and add a
+  button back to the Home hero.
 
 ## Preview locally
 
@@ -67,7 +69,11 @@ site/
 python3 -m http.server 4321 --directory site
 ```
 
-## Publish (free)
+## Published
 
-Push to a GitHub repo, then Settings → Pages → deploy from `main`.
-Or drag the folder onto netlify.com/drop.
+This folder is the git repo behind <https://alexli-lu.github.io> (GitHub Pages, `main` branch,
+root). To update: edit, `git add -A`, `git commit`, `git push`. Pages redeploys in about a
+minute.
+
+SEO: `robots.txt`, `sitemap.xml`, canonical links, Open Graph tags and a schema.org `Person`
+block on the Home page. `.nojekyll` stops GitHub from running Jekyll over the files.
