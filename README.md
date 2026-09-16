@@ -10,12 +10,14 @@ site/
 ├── research.html   Research — lede, works in progress, research experience, toolkit, contact
 ├── teaching.html   Teaching — photo band, lede, syllabus-style course index, photo band
 ├── phd.html        PhD at Ivey — supervisors, doctoral coursework
+├── paper-*.html    One title page per working paper: title, authors, abstract, keywords
 ├── style.css       All styling; design tokens at the top
 ├── profile.jpg     Portrait (circle crop)
 ├── home-hero.jpg   Home band (from Class.HEIC, pre-blurred Gaussian r=10)
 ├── China.png       Research band, shown whole
 ├── Ivey.png        PhD at Ivey band
-└── teaching-hero.jpg / teaching-exam.jpg   Teaching bands
+├── teaching-hero.jpg / teaching-exam.jpg   Teaching bands
+└── Alexis_Lu_CV.pdf   Published CV (stable filename, so the link never changes)
 ```
 
 ## Design tokens (`style.css`, `:root`)
@@ -52,16 +54,17 @@ site/
   the original file unmodified. Both are referenced from `.band__media--hero` and
   `.band__media--exam` in `style.css`; the crop is `background-position` and the blur strength
   is the `filter` on `--exam`. If a file is missing the band falls back to a dark gradient.
-- **Paper drafts** — each working paper title and its DRAFT link point at a Google Drive file
-  in `research.html`. Swap the URLs there when a draft moves.
+- **Papers** — the site shows a title page per paper, not the full draft. Each
+  `paper-*.html` carries the title, authors, abstract, keywords and a schema.org
+  `ScholarlyArticle` block; `research.html` links to them. To add a paper, copy an existing
+  `paper-*.html`, edit the content, link it from `research.html` and add it to `sitemap.xml`.
 - **Contact rule** — the email address is shown as plain text everywhere, never as a mailto
-  link; LinkedIn is always the live link.
+  link; LinkedIn is always the live link. The CV is linked from the Home page only.
 - **Accent** — one variable, `--accent`. A warm alternative that suits the paper ground
   is `#8A4B2F` (clay); a cooler one is `#28415C` (ink blue).
-- **CV** — deliberately NOT published. The academic CV carries a personal phone number, so it
-  is kept outside this folder (`../Alexis_CV_Academic_2026Summer.pdf`) and nothing links to it.
-  To publish one later, make a copy with the phone number removed, drop it in here, and add a
-  button back to the Home hero.
+- **CV** — published as `Alexis_Lu_CV.pdf`, linked from the Home hero button and the Contact
+  row. Keep that filename when you update it so the link never breaks. The current file is the
+  September 2026 CV; it does list a phone number, which Alexis decided was fine.
 
 ## Preview locally
 
