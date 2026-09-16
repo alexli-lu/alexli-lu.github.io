@@ -64,7 +64,8 @@ site/
   is `#8A4B2F` (clay); a cooler one is `#28415C` (ink blue).
 - **CV** — published as `Alexis_Lu_CV.pdf`, linked from the Home hero button and the Contact
   row. Keep that filename when you update it so the link never breaks. The current file is the
-  September 2026 CV; it does list a phone number, which Alexis decided was fine.
+  September 2026 CV; it does list a phone number, which Alexis decided was fine. Awards added
+  in that CV are deliberately left off the Honours & Service list on the Home page.
 
 ## Preview locally
 
